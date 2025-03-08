@@ -1,0 +1,221 @@
+/* style.css */
+body {
+    margin: 0;
+    background-color: #000;
+    /* background-color: #121212;  */
+    color: #fff; /* White text */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make body fill the viewport height */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+    text-align: center;
+}
+
+.logo .hexagon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 7rem; /* Increase font size for name */
+    font-weight: 100;
+    margin-top: 10px; /* Reduce space below the name */
+    margin-bottom: 0px; /* Reduce space below the name */
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem; /* Adjust subtitle size slightly */
+    font-weight: 200;
+    margin-top: 0px; /* Reduce space below the name */
+}
+
+.buttons {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 100px; /* Adjust spacing between buttons */
+    margin-top: 50px; /* Space above the buttons */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 80px; /* Adjust button size (height and width) */
+    font-size: 1.2rem; /* Adjust button text size */
+    font-family: 'Inconsolata', monospace; /* Apply Inconsolata font */
+    font-weight: 300; /* Use regular weight (adjust as needed) */
+    color: #fff; /* Button text color */
+    border: 1px solid #fff; /* Button border */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.button:hover {
+    background-color: #fff; /* Change background on hover */
+    color: #000; /* Change text color on hover */
+    font-weight: 500; /* Use regular weight (adjust as needed) */
+}
+
+@media (max-width: 768px) {
+.buttons {
+    flex-wrap: wrap; /* Stack buttons on smaller screens */
+    gap: 10px; /* Adjust spacing for smaller screens */
+}
+
+.button {
+    padding: 10px 20px; /* Make buttons smaller for mobile */
+    font-size: 0.9rem;
+}
+}
+  
+.styled-line {
+    border: none;
+    border-top: 1px solid #fff; /* Line thickness and color */
+    width: 100%; /* Line length */
+    margin: 10px auto; /* Center it horizontally with spacing */
+}
+
+/* Background Animation Layer */
+canvas#background {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* FOR ABOUT PAGE*/
+.about-container {
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: center; /* Vertically align content */
+    justify-content: space-between; /* Space between text and image */
+    padding: 40px; /* Add padding around the container */
+}
+
+/* Left Section: Text Styling */
+.about-text {
+    flex: 1; /* Take up available space on the left */
+}
+
+.about-heading {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for heading */
+    font-size: 5rem; /* Adjust heading size */
+    font-weight: 100; /* Bold heading */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+.about-description {
+    font-family: 'Inconsolata', monospace; /* Use Inconsolata font for text */
+    font-size: 1rem; /* Adjust text size */
+    line-height: 1.8; /* Improve readability with line spacing */
+    color: #fff; /* White text color */
+}
+
+/* Right Section: Image Styling */
+.about-image img {
+    margin-top: 70px;
+    margin-right: -100px;
+    width: 1000px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
+  
+
+
+/* Contact Page Container */
+.contact-container {
+
+    max-width: 1800px; /* Adjust width for a centered layout */
+    margin: 50px auto; /* Centered on the page */
+    padding: 40px;
+    color: #fff;
+}
+
+/* Heading Styling */
+.contact-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    text-align: left;
+}
+
+.styled-line {
+    border: none;
+    border-top: 1px solid #fff; /* Thin line */
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically */
+}
+
+.form-group {
+    flex: 1; /* Make Name and Email fields equal width */
+}
+
+
+
+.form-row {
+    display: flex; /* Align fields side by side */
+    gap: 20px; /* Space between Name and Email fields */
+    margin-bottom: 20px; /* Add space below Name and Email row */
+
+}
+
+
+.full-width {
+    width: calc(100% ); /* Full width for Message field */
+    margin-top: 10px; /* Add space above the Message field */
+
+}
+
+label {
+    font-family: 'Inconsolata', monospace; /* Label font */
+    font-size: 2rem;
+    margin-bottom: 10px; /* Add a small gap below labels */
+    
+}
+
+input, textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-top: 5px; /* Add space above input boxes */
+    font-size: 2rem; /* Adjust font size (e.g., 1rem for readability) */
+
+}
+
+input[type='text'], input[type='email'] {
+    height: 50px; /* Adjust height for text inputs */
+}
+
+textarea {
+    height: 300px;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    margin-top: 20px;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px;
+}
+.submit-button:hover {
+    background-color:white;color:black;
+    font-weight: 600; 
+
+}
+  
